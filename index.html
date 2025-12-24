@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traffic</title>
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>LIVE TRAFFIC DASHBOARD</h1>
+            <p class="subtitle">Endpoint Monitoring & Health Status</p>
+        </header>
+
+        <div class="card">
+            <h2>Endpoints Overview</h2>
+            <div class="endpoints-grid" id="endpoints-grid"></div>
+        </div>
+
+        <div class="card">
+            <h2>Ping Logs</h2>
+            
+            <div class="filters">
+                <button class="filter-btn active" onclick="filterLogs('all')">All Logs</button>
+                <button class="filter-btn" onclick="filterLogs('success')">Success</button>
+                <button class="filter-btn" onclick="filterLogs('error')">Errors</button>
+            </div>
+
+            <div class="controls">
+                <button class="btn" onclick="loadLogs()">Refresh</button>
+                <button class="btn" onclick="downloadLogs()">Download Logs</button>
+            </div>
+
+            <div id="logs-container"></div>
+            
+            <div class="pagination">
+                <button onclick="goToPage(1)" id="firstPage">First</button>
+                <button onclick="previousPage()" id="prevPage">Previous</button>
+                <span class="page-info" id="pageInfo">Page 1 of 1</span>
+                <button onclick="nextPage()" id="nextPage">Next</button>
+                <button onclick="goToPage(totalPages)" id="lastPage">Last</button>
+            </div>
+
+            <div class="last-updated" id="last-updated"></div>
+        </div>
+
+        <div class="info-text">
+            The dashboard refreshes automatically every minute. Endpoint pings are executed every 10 minutes via GitHub Actions workflow.
+        </div>
+    </div>
+
+    <script src="./index.js"></script>
+</body>
+</html>
