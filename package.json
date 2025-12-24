@@ -1,0 +1,19 @@
+{
+  "name": "traffic-keep-alive",
+  "version": "1.0.0",
+  "description": "Keep alive service to ping endpoints and prevent Netlify sleep",
+  "main": "ping-endpoints.js",
+  "scripts": {
+    "ping": "node ping-endpoints.js"
+  },
+  "keywords": [
+    "keep-alive",
+    "netlify",
+    "monitoring"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^1.6.0"
+  }
+}
