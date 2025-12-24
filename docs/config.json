@@ -1,0 +1,21 @@
+{
+  "interval": 10,
+  "endpoints": [
+    {
+      "name": "Portfolio",
+      "url": "https://abdurrahmaan9.netlify.app/"
+    },
+    {
+      "name": "Syncing Application",
+      "url": "https://syncin.gigalixirapp.com"
+    },
+    {
+      "name": "MySpace Clone",
+      "url": "https://myspace.gigalixirapp.com"
+    },
+    {
+      "name": "Zulu Sovereign Crown Group Website",
+      "url": "https://zulusovereign.netlify.app/"
+    }
+  ]
+}
